@@ -1,0 +1,33 @@
+{
+    "compact": false,
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "modules": "commonjs",
+          "targets": {
+            "browsers": [
+              "defaults",
+              "last 2 versions",
+              "> 0.5%",
+              "IE 10",
+              "Firefox ESR"
+            ]
+          }
+        }
+      ],
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-syntax-dynamic-import",
+      [
+      "@babel/plugin-proposal-decorators", { "decoratorsBeforeExport": true }
+      ],
+      "@babel/plugin-syntax-jsx",
+      "@babel/plugin-proposal-class-properties"
+    ],
+    "ignore": [
+        "node_modules/react-dom/**"
+    ]
+  }
+  
