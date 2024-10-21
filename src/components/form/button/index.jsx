@@ -3,10 +3,12 @@ import { TailSpin } from "react-loader-spinner"
 import clsx from "clsx";
 
 const Button = (props) => {
-  const { type, isSubmitting = false, theme = "primary", size = "big", children } = props;
+  const { type, isSubmitting = false, theme = "primary", size = "big", onClick, children } = props;
   
   return (
-    <button type={type} disabled={isSubmitting}
+    <button type={type}
+    disabled={isSubmitting}
+    onClick={() => onClick()}
     className={clsx("flex items-center justify-center border rounded-sm w-full",
       theme === "primary" && "bg-blue-600 text-white",
       size === "big" && "h-9"
@@ -32,5 +34,6 @@ Button.propTypes = {
   isSubmitting: PropTypes.bool,
   theme: PropTypes.string,
   size: PropTypes.string,
+  onClick: PropTypes.func,
   children: PropTypes.node
 }

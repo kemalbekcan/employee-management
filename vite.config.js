@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import babel from "vite-plugin-babel";
 import eslint from "vite-plugin-eslint";
-import commonjs from "vite-plugin-commonjs";
+// import commonjs from "vite-plugin-commonjs";
 import { compression } from "vite-plugin-compression2";
 import imagemin from "vite-plugin-imagemin";
 import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
@@ -27,7 +27,6 @@ export default defineConfig({
       babelrc: true,
     }),
     eslint(),
-    commonjs(),
     imagemin({
       gifsicle: { optimizationLevel: 3 },
       optipng: { optimizationLevel: 7 },
